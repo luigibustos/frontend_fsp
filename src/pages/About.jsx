@@ -14,7 +14,7 @@ function About(props) {
       // turn response into javascript object
       const data = await response.json();
       // set the about state to the data
-      setAbout(data[0]);
+      setAbout(data);
     }
     getAboutData();
   }, []);
