@@ -8,7 +8,9 @@ function About(props) {
   useEffect(() => {
     async function getAboutData() {
       // make api call and get response
-      const response = await fetch("./about.json");
+      const response = await fetch(
+        "https://lb-portfolio-backend.herokuapp.com/about"
+      );
       // turn response into javascript object
       const data = await response.json();
       // set the about state to the data
