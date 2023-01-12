@@ -1,0 +1,97 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faUserAstronaut,
+  faMeteor,
+  faShuttleSpace,
+  faSpaceShuttle,
+  faCircleChevronLeft,
+  faCode,
+} from "@fortawesome/free-solid-svg-icons";
+
+const NavBar = () => {
+  const [open, setOpen] = useState(true);
+  const navItem = [
+    {
+      name: "Home",
+      icon: faMeteor,
+      href: "/",
+      current: true,
+    },
+    {
+      name: "About",
+      icon: faUserAstronaut,
+      href: "/about",
+      current: true,
+    },
+    {
+      name: "Experience",
+      icon: faSpaceShuttle,
+      href: "/projects",
+      current: true,
+    },
+    {
+      name: "Projects",
+      icon: faShuttleSpace,
+      href: "/projects",
+      current: true,
+    },
+  ];
+
+  return (
+    <div className="flex">
+      <div
+        className={` ${
+          open ? "w-72" : "w-20 "
+        } bg-slate-500 h-screen p-5  pt-8 relative duration-300`}
+      >
+        <div className="flex gap-x-4 items-center w-full">
+          <FontAwesomeIcon
+            icon={faCode}
+            className={`text-gray-200 duration-500 text-xl hover:text-purple-400 ${
+              open && "rotate-[360deg]"
+            }`}
+            onClick={() => setOpen(!open)}
+          />
+          <h1
+            className={`text-gray-200 origin-left text-bold text-xl duration-200 ${
+              !open && "scale-0"
+            }`}
+          >
+            Luigi Bustos
+          </h1>
+        </div>
+        <ul className="pt-6">
+          <li
+            onClick={() => setOpen(!open)}
+          >
+            <FontAwesomeIcon
+              icon={faCode}
+              className={`text-gray-200 duration-500 text-xl hover:text-purple-400 ${
+                open && "rotate-[360deg]"
+              }`}
+              onClick={() => setOpen(!open)}
+            />
+          </li>
+          {navItem.map((item, index) => (
+            <Link to={item.href} key={index}>
+              <li
+                className={`flex rounded-md p-2 cursor-pointer hover:bg-amber-400 hover:text-black text-gray-300 text-xl items-center gap-x-4 `}
+              >
+                <FontAwesomeIcon icon={item.icon} />
+                <span
+                  className={`${!open && "hidden"} origin-left duration-200`}
+                >
+                  {item.name}
+                </span>
+              </li>
+            </Link>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+};
+
+export default NavBar;
