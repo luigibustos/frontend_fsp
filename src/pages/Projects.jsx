@@ -1,45 +1,55 @@
-import Waves from "../components/waves/Waves";
-
 function Projects() {
   const projects = [
     {
       name: "Project 1",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8&w=1000&q=80",
+      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      mainImg: "http://via.placeholder.com/640x360",
+      website: "Project Link",
+      gitHub: "GitHub Link",
     },
     {
       name: "Project 2",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8&w=1000&q=80",
+      desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      mainImg: "http://via.placeholder.com/640x360",
+      website: "Project Link",
+      gitHub: "GitHub Link",
     },
     {
       name: "Project 3",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8&w=1000&q=80",
+      desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      mainImg: "http://via.placeholder.com/640x360",
+      website: "Project Link",
+      gitHub: "GitHub Link",
     },
-    {
-      name: "Project 4",
-      image:
-        "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YWJzdHJhY3R8ZW58MHx8MHx8&w=1000&q=80",
-    },
+    // {
+    //   name: "Project 4",
+    // },
   ];
   return (
-    <div className="w-full h-screen">
-      <div className="w-full h-full px-20 flex flex-row justify-center items-center space-x-5">
-        {projects.map((project, idx) => {
+    <div className="h-screen bg-platinum">
+      <div className="h-full w-full px-10 flex flex-row space-x-6 content-center justify-center items-center">
+        {projects.map((project) => {
           return (
-            <div
-              key={idx}
-              className={`glass-card rounded-lg h-3/5 w-1/6 hover:w-1/2 duration-700`}
-            >
-              <div className="">
-                <h1 className="text-center">{project.name}</h1>
+            <div className="w-1/4 h-1/2 bg-orangeWeb rounded-lg hover:w-1/2 duration-700 shadow-lg p-6 group">
+              <div>
+                <img src={project.mainImg} />
+              </div>
+              <h1 className="w-full text-2xl">{project.name}</h1>
+              <p className="w-full text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear">
+                {project.desc}
+              </p>
+              <div className="flex flex-row">
+                <p className=" text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear">
+                  {project.website}
+                </p>
+                <p className="text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear">
+                  {project.gitHub}
+                </p>
               </div>
             </div>
           );
         })}
       </div>
-      <Waves />
     </div>
   );
 }

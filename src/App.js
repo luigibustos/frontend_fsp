@@ -1,23 +1,30 @@
 import "./App.css";
-import { Route, Routes } from "react-router-dom";
 
 // IMPORT COMPONENTS
-import SideBar from "./components/sidebar/SideBar";
+import NavBar from "./components/navbar/NavBar";
 // IMPORT PAGES
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 
 function App() {
-  const URL = "https://lb-portfolio-backend.herokuapp.com/about";
+  // const URL = "https://lb-portfolio-backend.herokuapp.com/about";
   return (
-    <main className="main-bg">
-      <SideBar />
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About URL={URL} />} />
-        <Route path="/projects" element={<Projects />} />
-      </Routes>
+    <main className="max-h-full bg-red-100 font-oswald">
+      <NavBar />
+      <div>
+        <ul>
+          <li id="home">
+            <Home />
+          </li>
+          <li id="about">
+            <About />
+          </li>
+          <li id="projects">
+            <Projects />
+          </li>
+        </ul>
+      </div>
     </main>
   );
 }

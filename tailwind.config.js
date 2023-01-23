@@ -2,15 +2,21 @@
 module.exports = {
   content: ["./src/**/*.{html,jsx}"],
   theme: {
-    // colors: {
-    //   primary: "#263E3E",
-    //   secondary: "#CFC5B6",
-    //   accent: "#FF8C67",
-    //   "p-background": "#1E1E24",
-    //   "s-background": "#B5B5B5",
-    // },
+    colors: {
+      platinum: "#EBEBEB",
+      cultured: "#F8F8F8",
+      orangeWeb: "#FBA423",
+      grayXgray: "#B8B8B8",
+      spanishGrey: "#9E9E9E",
+      davysGrey: "#565656",
+      eeireBlack: "#222222",
+      red: "#C4B5FD",
+      green: "#FCD34D",
+      blue: "#F9A8D4",
+    },
     fontFamily: {
       oswald: ["Oswald"],
+      cabin: ["Cabin"],
     },
     screens: {
       sm: "640px",
@@ -21,11 +27,22 @@ module.exports = {
     },
     extend: {
       animation: {
-        shine: "shine 1s",
+        blob: "blob 7s infinite",
       },
       keyframes: {
-        shine: {
-          "100%": { left: "125%" },
+        blob: {
+          "0%": {
+            transform: "translate(0px, 0px) scale(1)",
+          },
+          "33%": {
+            transform: "translate(30px, -50px) scale(1.1)",
+          },
+          "66%": {
+            transform: "translate(-20px, 20px) scale(0.9)",
+          },
+          "100%": {
+            transform: "tranlate(0px, 0px) scale(1)",
+          },
         },
       },
     },
