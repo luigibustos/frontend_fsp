@@ -10,13 +10,14 @@ module.exports = {
       spanishGrey: "#9E9E9E",
       davysGrey: "#565656",
       eeireBlack: "#222222",
-      red: "#C4B5FD",
-      green: "#FCD34D",
-      blue: "#F9A8D4",
+      spanishBistro: "#6F7330",
+      slateGrey: "#69747C",
+      yellowOrange: "#FAAC40",
     },
     fontFamily: {
       oswald: ["Oswald"],
       cabin: ["Cabin"],
+      bodoni: ["Bodoni Moda"],
     },
     screens: {
       sm: "640px",

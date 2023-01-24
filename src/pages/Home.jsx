@@ -63,12 +63,12 @@ function Home() {
               fill="url(#SvgjsPattern1573)"
               transform="rotate(341.7, 450.91, 328.01)"
             ></rect>
-            <path
+            {/* <path
               d="M598.8 281.73 L699.44 372.32L736.1047237675862 240.04027623241382z"
               stroke="rgba(105, 116, 124, 1)"
               stroke-width="1"
               stroke-dasharray="3, 2"
-            ></path>
+            ></path> */}
             <path
               d="M1037.99 633.8599999999999 L1037.85 576.0699999999999L1076.3626394706432 566.5223605293568z"
               stroke="rgba(251, 164, 35, 1)"
@@ -241,8 +241,10 @@ function Home() {
         </svg>
       </div>
       <div className="absolute top-1/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center z-10 text-eeireBlack drop-shadow-xl">
-        <h1 className="text-spanishGrey text-2xl">FULL STACK ENGINEER</h1>
-        <h1 className="text-8xl my-5">LUIGI BUSTOS</h1>
+        <h1 className="text-spanishGrey text-2xl font-light">
+          FULL STACK ENGINEER
+        </h1>
+        <h1 className="text-7xl my-5 font-bodoni font-medium">LUIGI BUSTOS</h1>
         <div>
           <a
             href="https://www.linkedin.com/"
@@ -252,28 +254,28 @@ function Home() {
           >
             <FontAwesomeIcon
               icon={faLinkedin}
-              className="h-8 hover:text-orangeWeb ease-linear duration-500"
+              className="h-8 hover:text-yellowOrange ease-linear duration-500"
             />
-            <span className="ml-2 text-3xl">LinkedIn</span>
+            <span className="ml-2 text-3xl font-light">LinkedIn</span>
           </a>
           <a
             href="https://github.com/"
             target="_blank"
             rel="noreferrer"
-            className="mx-6 cursor-pointer border-b-4 border-solid border-spanishGrey hover:border-orangeWeb ease-linear duration-500"
+            className="mx-6 cursor-pointer border-b-4 border-solid border-spanishGrey hover:border-yellowOrange text-eeireBlack ease-linear duration-500"
           >
             <FontAwesomeIcon
               icon={faGithub}
-              className="h-8 hover:text-orangeWeb ease-linear duration-700"
+              className="h-8 hover:text-yellowOrange ease-linear duration-700"
             />
-            <span className="ml-2 text-2xl">GitHub</span>
+            <span className="ml-2 text-3xl font-light">GitHub</span>
           </a>
         </div>
       </div>
       <div className="absolute bottom-20 left-1/2 transform -translate-x-1/2 -translate-y-1/2 animate-bounce">
         <HashLink smooth to={"/#about"} className="">
           <FontAwesomeIcon
-            className="h-12 text-spanishGrey hover:text-orangeWeb duration-500 ease-linear"
+            className="h-12 text-spanishGrey hover:text-yellowOrange duration-500 ease-linear"
             icon={faAngleDoubleDown}
           />
         </HashLink>
