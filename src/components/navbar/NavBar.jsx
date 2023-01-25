@@ -54,7 +54,9 @@ const NavBar = () => {
         <a className="cursor-pointer hover:text-orangeWeb hover:opacity-80 ease-linear duration-500">
           <FontAwesomeIcon icon={faEnvelope} />
         </a> */}
-        <span className="text-md font-light text-davysGrey">LUIGI BUSTOS</span>
+        <span className="text-md font-light text-davysGrey">
+          {nav ? "LUIGI BUSTOS" : "SAN FRANCISCO, CA"}
+        </span>
       </div>
     </nav>
   );

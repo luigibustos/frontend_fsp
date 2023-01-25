@@ -27,19 +27,22 @@ function About() {
     <div className="h-screen w-screen bg-cultured flex flex-row justify-center items-center">
       <div className="bg-eeireBlack h-3/4 w-11/12 rounded-lg flex flex-wrap flex-col sm:flex-row  justify-center items-center text-platinum shadow-xl relative z-0">
         <div className="h-1/2 sm:h-full w-full sm:w-1/2 px-10 flex flex-col justify-center items-center">
-          <h1 className="h-auto w-full text-left text-6xl m-4 font-bodoni">
-            ABOUT ME
-          </h1>
-          <p className="text-xl">
-            Hello, my name is Luigi Bustos! I am currently attending General
-            Assembly’s Software Engineering Immersive program. For the past 2.5
-            years, I’ve worked as a service desk technician at various
-            companies. My experience working as a Service Desk technician
-            sparked my passion for creating innovative ways to improve business
-            processes and enhancing end-user experiences. Through General
-            Assembly, I hope to gain the necessary skills to pivot into web
-            development or a front-end engineer position.
-          </p>
+          <div className="w-full h-auto">
+            <h1 className="h-auto w-full text-left text-6xl my-4 font-bodoni">
+              ABOUT ME
+            </h1>
+            <p className="text-xl">
+              As a General Assembly Software Engineer graduate, I’ve refined my
+              skills in JavaScript, Python, MongoDB, Express, React, and NodeJs
+              to become a well-rounded full-stack engineer. Before General
+              Assembly, working as a Service Desk Technician sparked my passion
+              for learning new technologies. My experience with Atlassian and
+              ServiceNow administration introduced me to JavaScript and Agile
+              software development. My goal is to pivot into a Web Developer or
+              Frontend Engineer role position to create innovative user
+              experiences and enhance existing business processes.
+            </p>
+          </div>
         </div>
         <div className="h-1/2 sm:h-full w-full sm:w-1/2 px-10 flex flex-row flex-wrap justify-center items-center content-center gap-5 text-eeireBlack z-20">
           {skills.map((skill) => {

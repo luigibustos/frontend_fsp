@@ -7,21 +7,21 @@ function Projects() {
   const projects = [
     {
       name: "Simon",
-      desc: "A Game of Short-Term Memory Skill",
+      desc: "A Game of Short-Term Memory Skill, built with JavaScript, HTML 5, CSS 3",
       mainImg: Simon,
       website: "Project Link",
       gitHub: "GitHub Link",
     },
     {
       name: "NiFT",
-      desc: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      desc: "NiFT is a full stack (MERN) reverse engineer project, built with MongoDB, Express, React.js, Node.js, BootStrap CSS, JavaScript",
       mainImg: NiFT,
       website: "Project Link",
       gitHub: "GitHub Link",
     },
     {
       name: "APItizers",
-      desc: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      desc: "As a part of General Assembly's Mini Hackathon, our team was tasked to build a front end project in eight hours. This porject was built with React.js, JavaScript, BootStrap CSS, CSS, and HTML. Our team won 'Most Finished', 'Most User Friendly', and 'Most Stylish / Vibrant'",
       mainImg: APItizers,
       website: "Project Link",
       gitHub: "GitHub Link",
