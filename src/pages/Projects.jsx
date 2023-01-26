@@ -9,22 +9,22 @@ function Projects() {
       name: "Simon",
       desc: "Developed and designed a single-player browser game SIMON using Vanilla JavaScript, HTML5, and CSS3. Implemented game logic, user interaction, and audio with JavaScript, animations, and transitions with CSS",
       mainImg: Simon,
-      website: "Project Link",
-      gitHub: "GitHub Link",
+      website: "https://luigibustos.github.io/project_1/",
+      gitHub: "https://github.com/luigibustos/project_1",
     },
     {
       name: "NiFT",
       desc: "Developed and designed NiFT, a reversed-engineered e-commerce site using the MERN stack. Incorporated MongoDB for database management and Express.js for server-side routing. Implemented responsive design for optimal user experience across different devices with Bootstrap CSS and React",
       mainImg: NiFT,
-      website: "Project Link",
-      gitHub: "GitHub Link",
+      website: "https://nift-bld.netlify.app/",
+      gitHub: "https://github.com/davidhlee94/project3-frontend",
     },
     {
       name: "APItizers",
       desc: "As a part of General Assembly's Mini Hackathon, our team was tasked to build a front end project in eight hours. This project was built with React.js, JavaScript, BootStrap CSS, CSS, and HTML. Our team won 'Most Finished', 'Most User Friendly', and 'Most Stylish / Vibrant'",
       mainImg: APItizers,
-      website: "Project Link",
-      gitHub: "GitHub Link",
+      website: "https://api-tizers.netlify.app/",
+      gitHub: "https://github.com/JohnnyGoodrich/snacks-fe",
     },
     // {
     //   name: "Project 4",
@@ -38,25 +38,37 @@ function Projects() {
       <div className="h-full w-full px-10 flex flex-row space-x-6 content-center justify-center items-center z-10">
         {projects.map((project) => {
           return (
-            <div className="w-1/4 h-1/2 bg-eeireBlack opacity-90 rounded-lg hover:w-1/2 duration-700 shadow-lg p-6 text-platinum group">
-              <div>
+            <div className="w-1/4 h-1/2 bg-eeireBlack opacity-90 rounded-lg duration-700 shadow-lg p-6 text-platinum group">
+              <div className="h-1/2 w-full">
                 <img
                   src={project.mainImg}
                   alt={project.name}
-                  className="grayscale group-hover:grayscale-0 duration-7000 ease-linear rounded-md shadow-md"
+                  className="w-full h-full grayscale group-hover:grayscale-0 duration-7000 ease-linear rounded-md shadow-md object-cover object-top"
                 />
               </div>
-              <h1 className="w-full text-2xl font-bold mt-6">{project.name}</h1>
-              <p className="w-full text-1xl font-semibold italic opacity-0 group-hover:opacity-100 duration-1000 ease-linear mt-3">
-                {project.desc}
-              </p>
-              <div className="flex flex-row justify-around w-full ">
-                <p className=" text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear">
-                  {project.website}
+              <div className="h-1/2 w-full">
+                <h1 className="w-full text-2xl font-bold mt-6">
+                  {project.name}
+                </h1>
+                <p className="w-full text-1xl font-semibold italic opacity-0 group-hover:opacity-100 duration-1000 ease-linear mt-3">
+                  {project.desc}
                 </p>
-                <p className="text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear mt-4">
-                  {project.gitHub}
-                </p>
+                <div className="flex flex-row justify-around w-full mt-4 text-1xl">
+                  <a
+                    href={project.website}
+                    target="_blank"
+                    className=" text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear"
+                  >
+                    Website
+                  </a>
+                  <a
+                    href={project.gitHub}
+                    target="_blank"
+                    className="text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear"
+                  >
+                    GitHub
+                  </a>
+                </div>
               </div>
             </div>
           );
