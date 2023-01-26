@@ -31,7 +31,7 @@ function About() {
             <h1 className="h-auto w-full text-left text-6xl my-4 font-bodoni">
               ABOUT ME
             </h1>
-            <p className="text-xl">
+            <p className="text-xl font-light">
               As a General Assembly Software Engineer graduate, I’ve refined my
               skills in JavaScript, Python, MongoDB, Express, React, and NodeJs
               to become a well-rounded full-stack engineer. Before General
