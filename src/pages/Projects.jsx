@@ -38,33 +38,35 @@ function Projects() {
       <div className="h-full w-full px-10 flex flex-row space-x-6 content-center justify-center items-center z-10">
         {projects.map((project) => {
           return (
-            <div className="w-1/4 h-1/2 bg-eeireBlack opacity-90 rounded-lg duration-700 shadow-lg p-6 text-platinum group">
+            <div className=" bg-eeireBlack rounded-lg duration-700 shadow-lg p-6 text-platinum">
               <div className="h-1/2 w-full">
                 <img
                   src={project.mainImg}
                   alt={project.name}
-                  className="w-full h-full grayscale group-hover:grayscale-0 duration-7000 ease-linear rounded-md shadow-md object-cover object-top"
+                  className="w-full h-full rounded-md shadow-md object-cover object-top"
                 />
               </div>
               <div className="h-1/2 w-full">
                 <h1 className="w-full text-2xl font-bold mt-6">
                   {project.name}
                 </h1>
-                <p className="w-full text-1xl font-semibold italic opacity-0 group-hover:opacity-100 duration-1000 ease-linear mt-3">
+                <p className="w-full text-1xl font-semibold italic  duration-1000 ease-linear mt-3">
                   {project.desc}
                 </p>
                 <div className="flex flex-row justify-around w-full mt-4 text-1xl">
                   <a
                     href={project.website}
                     target="_blank"
-                    className=" text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear"
+                    rel="noreferrer"
+                    className=" text-1xl z-20"
                   >
                     Website
                   </a>
                   <a
                     href={project.gitHub}
                     target="_blank"
-                    className="text-1xl opacity-0 group-hover:opacity-100 duration-1000 ease-linear"
+                    rel="noreferrer"
+                    className="text-1xl z-20"
                   >
                     GitHub
                   </a>
